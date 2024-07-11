@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+.loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #2d090a;
+  display: grid;
+  place-content: center;
+}
+.loader {
+  position: relative;
+  border: 24px solid;
+  border-color: #fff transparent #fff transparent;
+  animation: rotate 2s linear infinite;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  display: block;
+  border: 24px solid transparent;
+  border-left-color: #fff;
+  position: absolute;
+  left: -24px;
+  top: -24px;
+  animation: mvx 1s infinite linear;
+}
+.loader:before {
+  border-color: transparent #fff transparent transparent;
+  animation-name: mvrx;
+  animation-delay: 0.5s;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes mvx {
+  20%,
+  80% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes mvrx {
+  20%,
+  80% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(214, 46, 51, 0.6);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+.bg-logo {
+  background: url(../imgs/1.jpg);
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  font-size: 2rem;
+}
+.title {
+  text-align: center;
+  position: relative;
+  top: 54%;
+}
+.title h1 {
+  font-size: 60px;
+}
+.slider {
+  padding-left: 10px;
+  cursor: pointer;
+  margin-top: 50px;
+}
+#leftMenu {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  background-color: #111;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+#leftMenu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: 0.5s;
+}
+#leftMenu a:hover {
+  color: #601c1c;
+}
+#leftMenu a:first-child {
+  justify-content: end;
+}
+#sliderDown {
+  margin: 100px auto;
+  width: 50%;
+}
+#sliderDown .toggle {
+  background-color: #d6797c;
+  margin: 0;
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: white;
+}
+#sliderDown .inner {
+  background-color: #cccccc;
+  display: none;
+}
+.time {
+  background: url(../imgs/2.jpg) no-repeat center;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  height: 330px;
+}
+.container {
+  padding: 100px 0;
+}
+.count-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(214, 46, 51, 0.6);
+  color: white;
+}
+.tim {
+  padding: 50px;
+  border: 1px solid #fff;
+  font-weight: 500;
+  font-size: 30px;
+}
+#contact-us {
+  margin-top: 100px;
+}
+#contact-us .head h2 {
+  text-transform: uppercase;
+  font-size: 35px;
+  color: #444;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#contact-us .head p {
+  color: #777;
+  font-weight: 300;
+  font-size: 16px;
+}
+#contact-us .con-info h3 {
+  color: #444;
+  font-size: 18px;
+  font-weight: bold;
+}
+#contact-us .con-info p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #777;
+}
+#contact-us .icons p {
+  margin-bottom: 35px;
+}
+#contact-us i {
+  margin-right: 20px;
+  color: #777;
+}
+#contact-us .red {
+  color: #d62e33 !important;
+}
+#contact-us .con-info .social-list {
+  margin-top: 60px;
+  color: #777;
+}
+#contact-us .con-info .social-list i {
+  margin-right: 10px;
+  border: 1px solid #999;
+  width: 40px;
+  height: 40px;
+  line-height: 42px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+#contact-us .con-info .social-list i:hover {
+  background-color: #d62e33;
+}
+#contact-us form input,
+#contact-us form textarea {
+  margin-bottom: 20px;
+  border-radius: 0;
+}
+#contact-us form textarea {
+  height: 200px;
+  resize: vertical;
+}
+#chars {
+  font-size: 20px;
+  color: #d62e33;
+}
+#contact-us form button {
+  background-color: #d62e33;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 0;
+  text-transform: uppercase;
+}
